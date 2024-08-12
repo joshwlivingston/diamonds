@@ -1,0 +1,19 @@
+---
+title: "diamonds"
+author: "Josh Livingston"
+date: "`r Sys.time()`"
+output: html_document
+---
+
+```{r load-packages}
+library(ggplot2)
+```
+
+
+```{r diamonds-plot}
+diamonds |> 
+  ggplot() +
+  aes(carat, price, color = clarity) +
+  geom_point() +
+  theme_minimal()
+```
